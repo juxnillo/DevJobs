@@ -185,9 +185,8 @@ button {
     font-size: 1rem;
     white-space: nowrap;
 
-    &:hover, /* pseudo-clase que significa que el ratón está encima */
-  &:focus {
-        /* pseudo-clase que significa que el elemento tiene el foco */
+    &:hover,
+    &:focus {
         background-color: var(--primary-hover);
         outline: 2px solid white;
         outline-offset: 2px;
@@ -203,7 +202,6 @@ button {
     }
 }
 
-/* Features Section */
 main > section:nth-child(2) {
     padding-inline: 1rem;
     background-color: var(--background);
