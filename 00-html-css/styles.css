@@ -9,7 +9,7 @@
     --primary-dark: #0a3d66;
     --primary-hover: #0d5ba8;
     --primary-light: #09f;
-    --background: #101922;
+    --background: #06182a;
     --text-primary: #ffffff;
     --text-secondary: #cbd5e1;
     --text-muted: #94a3b8;
@@ -290,6 +290,12 @@ article {
     }
 }
 
+.search-filters {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+}
+
 .jobs-search {
     margin: 0;
     padding: 0;
@@ -333,16 +339,20 @@ article {
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 1rem;
 
-    article {
+    .job-listing-card {
         background: none;
         box-shadow: none;
         border-radius: 0;
         border-bottom: 1px solid rgba(255, 255, 255, 0.3);
         margin: 0;
 
-        display: flex;
+        display: flex; /* valor original */
         align-items: start;
         gap: 1rem;
+
+        &.is-hidden {
+            display: none;
+        }
 
         small {
             font-size: 0.875rem;
@@ -390,5 +400,13 @@ article {
             color: white;
             pointer-events: none;
         }
+    }
+}
+
+.button-apply-job {
+    background: #0099ff;
+    &.is-applied {
+        background: "#4caf50";
+        pointer-events: none;
     }
 }

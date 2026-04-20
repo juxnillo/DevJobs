@@ -4,7 +4,10 @@
         <title>DevJobs - Empleos</title>
         <meta charset="UTF-8" />
         <meta name="description" content="Listado de empleos de DevJobs" />
+
         <link rel="stylesheet" href="./styles.css" />
+
+        <script async src="./script.js"></script>
     </head>
 
     <body>
@@ -69,25 +72,28 @@
                         />
                     </div>
                     <div class="search-filters">
-                        <select name="technology" id="technology">
+                        <select name="technology" id="filter-technology">
                             <option value="">Tecnologia</option>
+                            <optgroup label="Tecnologias Populares">
                             <option value="javascript">JavaScript</option>
                             <option value="python">Python</option>
                             <option value="java">Java</option>
                             <option value="react">React</option>
                             <option value="nodejs">Node.js</option>
+                            </optgroup>
                         </select>
 
-                        <select name="location" id="location">
+                        <select name="location" id="filter-location">
                             <option value="">Ubicacion</option>
                             <option value="remoto">Remoto</option>
                             <option value="cdmx">Ciudad de Mexico</option>
                             <option value="guadalajara">Guadalajara</option>
                             <option value="monterrey">Monterrey</option>
                             <option value="barcelona">Barcelona</option>
+
                         </select>
 
-                        <select name="experience-level" id="experience-level">
+                        <select name="experience-level" id="filter-experience-level">
                             <option value="">Nivel de experiencia</option>
                             <option value="junior">Junior</option>
                             <option value="mid">Mid-level</option>
@@ -98,11 +104,14 @@
 
                     <p id="mensaje-filtro" style="margin-top": 1rem; color: var(--primary-light);></p>
                 </form>
+            </section>
+            <section>
+                <h2>Resultados de busqueda</h2>
 
                 <div class="jobs-listings">
                   <article class="job-listing-card">
                     <div>
-                      <h3>Ingeniero de Software</h3>
+                      <h2>Ingeniero de Software</h2>
                       <small>Tech Solutions Inc. | Remoto</small>
                       <p>
                         Buscamos un ingeniero de software con experiencia en desarrollo web y conocimientos en
@@ -115,7 +124,7 @@
 
                   <article class="job-listing-card">
                     <div>
-                      <h3>Analista de Datos</h3>
+                      <h2>Analista de Datos</h2>
                       <small>Data Driven Co. | Ciudad de México</small>
                       <p>
                         Estamos buscando un analista de datos con experiencia en el manejo de grandes conjuntos de
@@ -127,7 +136,7 @@
 
                   <article class="job-listing-card">
                     <div>
-                      <h3>Desarrollador de Aplicaciones Móviles</h3>
+                      <h2>Desarrollador de Aplicaciones Móviles</h2>
                       <small>Mobile Apps Ltd. | Guadalajara</small>
                       <p>
                         Buscamos un desarrollador de aplicaciones móviles con experiencia en iOS y/o Android. El
@@ -140,7 +149,7 @@
 
                   <article class="job-listing-card">
                     <div>
-                      <h3>Ingeniero de DevOps</h3>
+                      <h2>Ingeniero de DevOps</h2>
                       <small>Cloud Services SA | Remoto</small>
                       <p>
                         Estamos buscando un ingeniero de DevOps con experiencia en la gestión de infraestructuras en
@@ -162,7 +171,7 @@
                     <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M9 6l6 6l-6 6" /></svg></a>
 
                 </nav>
-            </section>
+                </section>
         </main>
 
         <footer>
