@@ -5,7 +5,7 @@
 }
 
 :root {
-    --primary: #1173d4;
+    --primary: #3b4550;
     --primary-dark: #0a3d66;
     --primary-hover: #0d5ba8;
     --primary-light: #09f;
@@ -43,8 +43,34 @@ body {
     line-height: 1.6;
 }
 
+select {
+    padding: 0.625rem 1.25rem;
+    background-color: #242d3a;
+    border: 0;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    color: #ddd;
+    cursor: pointer;
+    transition: all 0.2s;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.5rem center;
+    padding-right: 2.5rem;
+
+    &:hover {
+        background-color: var(--primary-hover);
+        color: white;
+    }
+
+    &:focus {
+        outline: 2px solid #1173d4;
+        outline-offset: 2px;
+    }
+}
+
 h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     line-height: 1.2;
     text-wrap: balance;
     display: flex;
@@ -65,7 +91,7 @@ h1 + p {
 
 header {
     border-bottom: 1px solid var(--border);
-    background-color: var(--background);
+    background: var(--background);
     padding: 0.5rem 1rem;
     display: flex;
     align-items: center;
@@ -131,10 +157,8 @@ main > section:nth-child(1) {
         right: 0;
         mask-image: linear-gradient(
             to bottom,
-            rgba(16, 25, 34, 1),
-            5%,
-            rgba(16, 25, 34, 0),
-            80%
+            rgba(16, 25, 34, 1) 5%,
+            rgba(16, 25, 34, 0) 80%
         );
     }
 }
@@ -182,7 +206,7 @@ form input[type="text"]::placeholder {
 button {
     padding: 0.75rem 1.5rem;
     border-radius: 0.5rem;
-    background-color: var(--border);
+    background-color: var(--primary);
     color: white;
     font-weight: 400;
     border: none;
@@ -192,8 +216,9 @@ button {
     font-size: 1rem;
     white-space: nowrap;
 
-    &:hover,
-    &:focus {
+    &:hover, /* pseudo-clase que significa que el ratón está encima */
+  &:focus {
+        /* pseudo-clase que significa que el elemento tiene el foco */
         background-color: var(--primary-hover);
         outline: 2px solid white;
         outline-offset: 2px;
@@ -209,6 +234,7 @@ button {
     }
 }
 
+/* Features Section */
 main > section:nth-child(2) {
     padding-inline: 1rem;
     background-color: var(--background);
@@ -247,6 +273,7 @@ main > section:nth-child(2) > div > div:first-child > p {
     margin: 0 auto;
 }
 
+/* Grid de Features */
 main > section:nth-child(2) footer {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -315,31 +342,6 @@ article {
         display: flex;
         flex-wrap: wrap;
         margin-top: 0.5rem;
-
-        select {
-            background-color: #242d3a;
-            appearance: none;
-            border: 0;
-            padding: 0.625rem 1.25rem;
-            border-radius: 0.5rem;
-            cursor: pointer;
-            transition: all 0.2s;
-            font-family: system-ui;
-            font-size: 0.875rem;
-            color: #ddd;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9' /%3E%3C/svg%3E");
-            background-repeat: no-repeat;
-            background-position: right 0.5rem center;
-            padding-right: 2.5rem;
-
-            &:hover {
-                background-color: var(--primary-hover);
-                color: white;
-            }
-            &:focus {
-                outline: 2px solid #1173d4;
-            }
-        }
     }
 
     form {
@@ -365,7 +367,7 @@ article {
         border-bottom: 1px solid rgba(255, 255, 255, 0.3);
         margin: 0;
 
-        display: flex; /* valor original */
+        display: flex;
         align-items: start;
         gap: 1rem;
 
