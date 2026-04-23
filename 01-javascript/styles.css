@@ -264,6 +264,7 @@ main > section:nth-child(2) h2 {
     font-weight: 700;
     color: var(--text-primary);
     margin-bottom: 1rem;
+    margin-left: 2rem;
 }
 
 main > section:nth-child(2) > div > div:first-child > p {
@@ -313,7 +314,7 @@ article {
     }
 
     h3 {
-        font-weight: 500;
+        font-weight: 900;
     }
 }
 

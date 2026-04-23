@@ -11,6 +11,7 @@ fetch("./data.json")
       article.dataset.modalidad = job.data.modalidad;
       article.dataset.nivel = job.data.nivel;
       article.dataset.technology = job.data.technology;
+      article.dataset.titulo = job.titulo;
 
       article.innerHTML = `
         <div>
